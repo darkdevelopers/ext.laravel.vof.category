@@ -20,6 +20,11 @@ class CategoryServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'vof.admin.category');
         $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'vof.admin.category');
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+        $this->publishes([
+            __DIR__.'/database/migrations' => database_path('migrations'),
+        ], 'ext.laravel.vof.category');
     }
 
     public function register()
