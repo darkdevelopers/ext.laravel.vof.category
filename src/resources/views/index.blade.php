@@ -16,25 +16,9 @@
     <h2>@lang('vof.admin.category::category.index.headline')</h2>
     <div class="row">
         <div class="col">
-            loading...
-        </div>
-        <div class="col">
-            loading...
-        </div>
-        <div class="col">
-            loading...
-        </div>
-        <div class="col">
-            loading...
-        </div>
-        <div class="col">
-            loading...
-        </div>
-        <div class="col">
-            loading...
-        </div>
-        <div class="col">
-            loading...
+            @foreach($categorys as $category)
+                {{ var_dump($category) }}
+            @endforeach
         </div>
     </div>
 @endsection()

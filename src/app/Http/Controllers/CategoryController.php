@@ -6,12 +6,14 @@
 
 namespace Vof\Category\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 use Vof\Admin\Models\Admin;
 use Validator;
+use Vof\Category\Http\Helpers\CategoryHelper;
 use Vof\Category\Models\Category;
 
 /**
@@ -34,10 +36,13 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $categorys = Category::with('categoryContent')->get();
-        var_dump($categorys);
-        exit;
-        return view('vof.admin.category::index');
+        /** @var Collection $collection */
+        $collection = Category::with('categoryContent')->get();
+
+        /** @var array $categorys */
+        $categorys = CategoryHelper::transformCategorys($collection);
+
+        return view('vof.admin.category::index', ['categorys' => $categorys]);
     }
 
     /**
