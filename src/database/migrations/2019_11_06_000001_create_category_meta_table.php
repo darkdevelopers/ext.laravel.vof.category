@@ -20,7 +20,7 @@ class CreateCategoryMetaTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorie_metas', function (Blueprint $table) {
+        Schema::create('category_metas', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('meta_title')->default('')->nullable(false);
@@ -37,6 +37,6 @@ class CreateCategoryMetaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorie_metas');
+        Schema::dropIfExists('category_metas');
     }
 }

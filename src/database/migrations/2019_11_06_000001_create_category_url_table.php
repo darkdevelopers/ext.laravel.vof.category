@@ -20,7 +20,7 @@ class CreateCategoryUrlTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorie_urls', function (Blueprint $table) {
+        Schema::create('category_urls', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('url')->default('')->nullable(false);
@@ -36,6 +36,6 @@ class CreateCategoryUrlTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories_url');
+        Schema::dropIfExists('category_urls');
     }
 }

@@ -7,6 +7,7 @@
 namespace Vof\Category\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Category
@@ -15,6 +16,11 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use SoftDeletes;
+
+    /**
+     * @var array
+     */
+    protected $with = ['categoryContent'];
 
     /**
      * The attributes that are mass assignable.

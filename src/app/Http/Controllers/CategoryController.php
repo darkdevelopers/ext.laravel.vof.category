@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 use Vof\Admin\Models\Admin;
 use Validator;
+use Vof\Category\Models\Category;
 
 /**
  * Class CategoryController
@@ -33,6 +34,9 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
+        $categorys = Category::with('categoryContent')->get();
+        var_dump($categorys);
+        exit;
         return view('vof.admin.category::index');
     }
 

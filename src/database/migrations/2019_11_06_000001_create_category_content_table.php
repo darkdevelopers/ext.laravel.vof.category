@@ -21,7 +21,7 @@ class CreateCategoryContentTable extends Migration
     public function up()
     {
         Schema::enableForeignKeyConstraints();
-        Schema::create('categorie_contents', function (Blueprint $table) {
+        Schema::create('category_contents', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('title')->default('')->nullable(false);
@@ -39,6 +39,6 @@ class CreateCategoryContentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorie_contents');
+        Schema::dropIfExists('category_contents');
     }
 }

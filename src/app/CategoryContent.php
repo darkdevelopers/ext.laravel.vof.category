@@ -7,9 +7,10 @@
 namespace Vof\Category\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class CategoryContent
+ * Class CategoriesContent
  * @package Vof\Category\Models
  */
 class CategoryContent extends Model
@@ -31,7 +32,7 @@ class CategoryContent extends Model
     protected $hidden = [
         'category_id', 'created_at', 'deleted_at', 'updated_at'
     ];
-    
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

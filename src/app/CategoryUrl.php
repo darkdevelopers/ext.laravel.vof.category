@@ -7,6 +7,7 @@
 namespace Vof\Category\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class CategoryUrl
