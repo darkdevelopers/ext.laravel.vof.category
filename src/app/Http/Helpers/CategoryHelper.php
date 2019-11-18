@@ -75,15 +75,29 @@ class CategoryHelper
      * @param array $categorys
      * @return string
      */
-    public static function toHtml(array $categorys): string
+    public static function toHtml(array $categorys, bool $collapse = false, int $level = 0): string
     {
-        $html = '<ul>';
+        $html = '<ul class="cd-accordion__sub cd-accordion__sub--l'.$level.'">';
+        if (!$collapse) {
+            $html = '<ul class="cd-accordion margin-top-lg margin-bottom-lg">';
+        }
 
         foreach ($categorys as $category) {
-            $html .= '<li>' . $category['value'] . '</li>';
-            if (array_key_exists('children', $category)) {
-                $html .= self::toHtml($category['children']);
+            //d-flex justify-content-between align-items-center
+            $child = 0;
+            $class = '';
+            if(array_key_exists('children', $category)){
+                $child = count($category['children']);
             }
+
+
+            $html .= '<li class="cd-accordion__item cd-accordion__item--has-children">
+                       <input class="cd-accordion__input" type="checkbox" name ="'.$category['value'].$category['parent_id'].'" id="'.$category['value'].$category['parent_id'].'">
+                        <label class="cd-accordion__label cd-accordion__label--icon-folder" for="'.$category['value'].$category['parent_id'].'"><span style="width:95%;">'.$category['value'].'</span><span class="badge badge-pill badge-light">'.$child.'</span></label>';
+            if (array_key_exists('children', $category)) {
+                $html .= self::toHtml($category['children'], true, $level + 1);
+            }
+            $html .= '</li>';
         }
 
         $html .= '</ul>';
