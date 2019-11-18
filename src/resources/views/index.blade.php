@@ -16,6 +16,11 @@
             line-height: 1.6;
             color: #212529;
         }
+        .btn-primary {
+            color: #fff;
+            background-color: #3490dc;
+            border-color: #3490dc;
+        }
     </style>
 @endsection
 
@@ -31,6 +36,12 @@
     <h2>@lang('vof.admin.category::category.index.headline')</h2>
     <div class="row">
         <div class="col">
+            <div class="card">
+                <a href="#" class="btn btn-primary">
+                    <i class="fa fa-fw fa-plus" aria-hidden="true"></i>
+                    @lang('vof.admin.category::category.index.add-category')
+                </a>
+            </div>
             {!! $categorys !!}
         </div>
     </div>

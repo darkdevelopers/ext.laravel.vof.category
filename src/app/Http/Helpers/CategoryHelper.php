@@ -93,7 +93,11 @@ class CategoryHelper
 
             $html .= '<li class="cd-accordion__item cd-accordion__item--has-children">
                        <input class="cd-accordion__input" type="checkbox" name ="'.$category['value'].$category['parent_id'].'" id="'.$category['value'].$category['parent_id'].'">
-                        <label class="cd-accordion__label cd-accordion__label--icon-folder" for="'.$category['value'].$category['parent_id'].'"><span style="width:95%;">'.$category['value'].'</span><span class="badge badge-pill badge-light">'.$child.'</span></label>';
+                        <label class="cd-accordion__label cd-accordion__label--icon-folder" for="'.$category['value'].$category['parent_id'].'">
+                            <span style="width:95%;">'.$category['value'].'</span>
+                            <span style="width:5%"><a href="#" class="btn btn-primary"><i class="fas faw fa-edit" aria-hidden="true"></i></a></span>    
+                            <span class="badge badge-pill badge-light">'.$child.'</span>
+                        </label>';
             if (array_key_exists('children', $category)) {
                 $html .= self::toHtml($category['children'], true, $level + 1);
             }
