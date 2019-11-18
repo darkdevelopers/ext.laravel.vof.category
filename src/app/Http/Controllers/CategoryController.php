@@ -40,10 +40,8 @@ class CategoryController extends Controller
         $collection = Category::with('categoryContent')->get();
         /** @var Collection $sortedCollection */
         $sortedCollection = $collection->sortBy('parent_id');
-
         /** @var array $categorys */
         $categorys = CategoryHelper::transformCategorys($sortedCollection);
-
         /** @var String $categorysString */
         $categorysString = CategoryHelper::toHtml($categorys);
 
