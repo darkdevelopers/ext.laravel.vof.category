@@ -16,11 +16,7 @@
     <h2>@lang('vof.admin.category::category.index.headline')</h2>
     <div class="row">
         <div class="col">
-            <ul>
-            @foreach($categorys as $category)
-                <li>{{$category['value']}}</li>
-            @endforeach
-            </ul>
+           {!! $categorys !!}
         </div>
     </div>
 @endsection()
