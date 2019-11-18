@@ -5,4 +5,7 @@ return [
         'headline' => 'Category',
         'add-category' => 'Add Category'
     ],
+    'create' => [
+        'headline' => 'Create Category'
+    ]
 ];

@@ -53,7 +53,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return null;
+        return view('vof.admin.category::create');
     }
 
     /**

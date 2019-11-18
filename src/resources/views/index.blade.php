@@ -37,7 +37,7 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <a href="#" class="btn btn-primary">
+                <a href="{{ route('category.create') }}" class="btn btn-primary">
                     <i class="fa fa-fw fa-plus" aria-hidden="true"></i>
                     @lang('vof.admin.category::category.index.add-category')
                 </a>
