@@ -38,6 +38,6 @@ class CategoryServiceProvider extends ServiceProvider
 
     public function register()
     {
-
+        
     }
 }

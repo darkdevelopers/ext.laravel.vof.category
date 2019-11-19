@@ -20,7 +20,7 @@ class CreateCategoryMetaTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_metas_types', function (Blueprint $table) {
+        Schema::create('category_meta_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('type')->default('')->nullable(false);
             $table->timestamps();
@@ -35,6 +35,6 @@ class CreateCategoryMetaTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_metas_twitter');
+        Schema::dropIfExists('category_meta_types');
     }
 }
