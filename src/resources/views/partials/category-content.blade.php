@@ -4,13 +4,19 @@
         {!! Form::hidden('_method', 'POST') !!}
         <span>
             <b>
-                Contents
+                @lang('vof.admin.category::category.create.partials.general-informations')
             </b>
         </span>
+        <hr/>
         <div class="form-label-group">
-            <input type="text" id="name" name="name" class="form-control @if(!empty($errors->error->first('name'))) is-invalid @endif" placeholder="@lang('vof.admin.usermanagment::usermanagment.partials.create-read-update.username')" value="@if(empty($admin)){{ old('name') }}@else {{ $admin->name }}@endif" required autofocus @if($disabled)disabled="disabled"@endif>
-            <label for="name"></label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="@lang('vof.admin.category::category.create.partials.placeholder.title')">
+            <label for="title"></label>
         </div>
+        <div class="form-label-group">
+            <label for="description">@lang('vof.admin.category::category.create.partials.placeholder.description')</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+
         {!! Form::close() !!}
     </div>
 </div>
