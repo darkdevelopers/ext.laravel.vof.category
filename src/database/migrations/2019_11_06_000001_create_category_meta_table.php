@@ -23,7 +23,6 @@ class CreateCategoryMetaTable extends Migration
         Schema::create('category_metas', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->string('meta_title')->default('')->nullable(false);
             $table->string('meta_description')->default('')->nullable(false);
             $table->timestamps();
             $table->softDeletes();
