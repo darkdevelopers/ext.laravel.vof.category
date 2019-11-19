@@ -9,9 +9,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * Class AlterCategoryMetaTable
+ * Class CreateCategoryMetaTable
  */
-class AlterCategoryMeta extends Migration
+class CreateCategoryMetaTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,8 +20,11 @@ class AlterCategoryMeta extends Migration
      */
     public function up()
     {
-        Schema::table('category_metas', function (Blueprint $table) {
-            $table->bigIncrements('id')->first();
+        Schema::create('category_metas_types', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('type')->default('')->nullable(false);
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -32,8 +35,6 @@ class AlterCategoryMeta extends Migration
      */
     public function down()
     {
-        Schema::table('category_metas', function (Blueprint $table) {
-            $table->dropColumn('id');
-        });
+        Schema::dropIfExists('category_metas_twitter');
     }
 }
