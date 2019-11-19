@@ -1,7 +1,6 @@
 @extends('admin::layouts.admin-layout-default')
 
 @section('css')
-    <script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/classic/ckeditor.js"></script>
 @endsection
 
 @section('title')
@@ -19,5 +18,4 @@
 @endsection()
 
 @section('scripts')
-    @include('vof.admin.category::scripts.wysiwyg')
 @endsection
