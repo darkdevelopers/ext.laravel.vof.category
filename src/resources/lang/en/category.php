@@ -21,6 +21,7 @@ return [
                 'delete_category_message' => 'Are you sure you want to delete :category?',
                 'delete_category_btn_cancel' => '<i class="fas fa-fw fa-times" aria-hidden="true"></i> Cancel',
                 'delete_category_btn_confirm' => '<i class="fas fa-fw fa-trash-alt" aria-hidden="true"></i> Delete',
+                'category-delete-success' => 'Successfully deleted the category!',
             ]
         ]
     ],

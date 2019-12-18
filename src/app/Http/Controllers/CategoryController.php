@@ -70,7 +70,7 @@ class CategoryController extends Controller
      */
     public function destroy(int $id)
     {
-        return null;
+        return redirect(route('category'))->with('success', trans('vof.admin.category::category.index.partials.table.category-delete-success'));
     }
 
     /**
