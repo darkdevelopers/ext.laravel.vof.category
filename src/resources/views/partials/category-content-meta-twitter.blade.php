@@ -26,8 +26,8 @@
     <label for="metaFacebookSitename"></label>
 </div>
 <div class="form-label-group">
-    <label for="metaFacebookType">@lang('vof.admin.category::category.create.partials.placeholder.meta.type')</label>
-    <select id="metaFacebookType" class="form-control">
+    <label for="metaTwitterType">@lang('vof.admin.category::category.create.partials.placeholder.meta.type')</label>
+    <select id="metaTwitterType" class="form-control">
         @foreach($metaTypes as $metaType)
             <option value="{{ $metaType->id }}">{{ $metaType->type }}</option>
         @endforeach

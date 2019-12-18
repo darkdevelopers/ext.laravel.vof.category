@@ -16,8 +16,8 @@
 </div>
 <div class="form-label-group">
     <br>
-    <label for="metaFacebookType">@lang('vof.admin.category::category.create.partials.placeholder.meta.type')</label>
-    <select id="metaFacebookType" class="form-control">
+    <label for="metaType">@lang('vof.admin.category::category.create.partials.placeholder.meta.type')</label>
+    <select id="metaType" class="form-control">
         @foreach($metaTypes as $metaType)
             <option value="{{ $metaType->id }}">{{ $metaType->type }}</option>
         @endforeach
