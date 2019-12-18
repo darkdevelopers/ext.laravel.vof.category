@@ -60,11 +60,13 @@ class CategoryController extends Controller
      */
     public function edit(int $id)
     {
+        dd("edit");
         return null;
     }
 
     public function update(Request $request, int $id)
     {
+        dd("update");
         return null;
     }
 
@@ -84,6 +86,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        dd("store");
         return null;
     }
 }
