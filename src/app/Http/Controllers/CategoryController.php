@@ -38,14 +38,8 @@ class CategoryController extends Controller
     {
         /** @var Collection $collection */
         $collection = Category::with('categoryContent')->get();
-        /** @var Collection $sortedCollection */
-        $sortedCollection = $collection->sortBy('parent_id');
-        /** @var array $categorys */
-        $categorys = CategoryHelper::transformCategorys($sortedCollection);
-        /** @var String $categorysString */
-        $categorysString = CategoryHelper::toHtml($categorys);
 
-        return view('vof.admin.category::index', ['categorys' => $categorysString]);
+        return view('vof.admin.category::index', ['categorys' => $collection]);
     }
 
     /**
