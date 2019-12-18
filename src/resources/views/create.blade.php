@@ -14,7 +14,6 @@
 @section('content')
     <h2>@lang('vof.admin.category::category.create.headline')</h2>
     @include('vof.admin.category::partials.category-content', ['metaTypes' => $metaTypes])
-
 @endsection()
 
 @section('scripts')

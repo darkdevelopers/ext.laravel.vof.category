@@ -32,6 +32,7 @@ return [
             'meta-informations' => 'Meta Informations',
             'meta-facebook-informations' => 'Facebook meta informations',
             'meta-twitter-informations' => 'Twitter meta informations',
+            'btn-save' => 'Save',
             'placeholder' => [
                 'title' => 'Category Title',
                 'description' => 'Description',
