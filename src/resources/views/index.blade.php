@@ -20,8 +20,9 @@
 @section('content')
     <h2>@lang('vof.admin.category::category.index.headline')</h2>
     <div class="row">
-        <div class="col">
-            @include('vof.admin.category::partials.table', ['categorys' => $categorys])
+        <div class="col-sm-12">
+            @include('vof.admin.usermanagment::partials.form-status')
         </div>
     </div>
+    @include('vof.admin.category::partials.table', ['categorys' => $categorys])
 @endsection()
