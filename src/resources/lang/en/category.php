@@ -29,9 +29,16 @@ return [
         'headline' => 'Create Category',
         'partials' => [
             'general-informations' => 'General Informations',
+            'meta-informations' => 'Meta Informations',
+            'meta-facebook-informations' => 'Facebook meta informations',
+            'meta-twitter-informations' => 'Twitter meta informations',
             'placeholder' => [
                 'title' => 'Category Title',
                 'description' => 'Description',
+                'meta' => [
+                    'title' => 'Meta Title',
+                    'description' => 'Meta Description',
+                ]
             ]
         ]
     ],

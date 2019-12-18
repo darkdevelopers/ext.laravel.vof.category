@@ -2,21 +2,10 @@
     <div style="overflow-x: auto" class="card-body">
         {!! Form::open(array('url' => route('category.store'), 'class' => 'form-signin')) !!}
         {!! Form::hidden('_method', 'POST') !!}
-        <span>
-            <b>
-                @lang('vof.admin.category::category.create.partials.general-informations')
-            </b>
-        </span>
-        <hr/>
-        <div class="form-label-group">
-            <input type="text" id="title" name="title" class="form-control" placeholder="@lang('vof.admin.category::category.create.partials.placeholder.title')">
-            <label for="title"></label>
-        </div>
-        <div class="form-label-group">
-            <label for="description">@lang('vof.admin.category::category.create.partials.placeholder.description')</label>
-            <textarea class="form-control" id="description" rows="3"></textarea>
-        </div>
-
+        @include('vof.admin.category::partials.category-content-general')
+        @include('vof.admin.category::partials.category-content-meta')
+        @include('vof.admin.category::partials.category-content-meta-facebook')
+        @include('vof.admin.category::partials.category-content-meta-twitter')
         {!! Form::close() !!}
     </div>
 </div>
