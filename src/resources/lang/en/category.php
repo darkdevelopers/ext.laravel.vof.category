@@ -38,6 +38,9 @@ return [
                 'meta' => [
                     'title' => 'Meta Title',
                     'description' => 'Meta Description',
+                    'url' => 'Meta Url',
+                    'sitename' => 'Meta Sitename',
+                    'type' => 'Meta Type',
                 ]
             ]
         ]

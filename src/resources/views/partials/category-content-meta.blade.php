@@ -14,3 +14,12 @@
     <label for="metaDescription">@lang('vof.admin.category::category.create.partials.placeholder.meta.description')</label>
     <textarea class="form-control" id="metaDescription" rows="3" maxlength="160" placeholder="@lang('vof.admin.category::category.create.partials.placeholder.meta.description')"></textarea>
 </div>
+<div class="form-label-group">
+    <br>
+    <label for="metaFacebookType">@lang('vof.admin.category::category.create.partials.placeholder.meta.type')</label>
+    <select id="metaFacebookType" class="form-control">
+        @foreach($metaTypes as $metaType)
+            <option value="{{ $metaType->id }}">{{ $metaType->type }}</option>
+        @endforeach
+    </select>
+</div>

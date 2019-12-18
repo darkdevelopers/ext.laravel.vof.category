@@ -15,6 +15,7 @@ use Vof\Admin\Models\Admin;
 use Validator;
 use Vof\Category\Http\Helpers\CategoryHelper;
 use Vof\Category\Models\Category;
+use Vof\Category\Models\CategoryMetaType;
 
 /**
  * Class CategoryController
@@ -47,7 +48,10 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('vof.admin.category::create');
+        /** @var Collection $collectionMetaType */
+        $collectionMetaType = CategoryMetaType::all();
+
+        return view('vof.admin.category::create', ['metaTypes' => $collectionMetaType]);
     }
 
     /**
