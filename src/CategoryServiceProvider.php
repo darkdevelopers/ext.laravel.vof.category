@@ -25,19 +25,10 @@ class CategoryServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/database/migrations' => database_path('migrations'),
         ], 'ext.laravel.vof.category');
-        $this->publishes([
-            __DIR__.'/assets/css' => public_path('css/vof.admin'),
-        ], 'ext.laravel.vof.category');
-        $this->publishes([
-            __DIR__.'/assets/js' => public_path('js/vof.admin'),
-        ], 'ext.laravel.vof.category');
-        $this->publishes([
-            __DIR__.'/assets/img' => public_path('css/img'),
-        ], 'ext.laravel.vof.category');
     }
 
     public function register()
     {
-        
+
     }
 }
