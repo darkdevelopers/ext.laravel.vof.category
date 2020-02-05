@@ -1,6 +1,11 @@
 @extends('admin::layouts.admin-layout-default')
 
 @section('css')
+    <link rel="stylesheet" href="/css/upload.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 @endsection
 
 @section('title')
@@ -17,4 +22,5 @@
 @endsection()
 
 @section('scripts')
+    @include('vof.admin.assets::scripts.upload')
 @endsection

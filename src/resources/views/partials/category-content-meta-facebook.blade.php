@@ -6,9 +6,7 @@
 </span>
 <hr/>
 <div class="form-label-group">
-    <span>
-        @Todo Implement Image upload
-    </span>
+    @include('vof.admin.assets::partials.upload', ['name' => 'metaFBImage', 'uploadLable' => 'upload-label-meta-fb'])
 </div>
 <div class="form-label-group">
     <input type="text" id="metaFacebookTitle" name="metaFacebookTitle" class="form-control"

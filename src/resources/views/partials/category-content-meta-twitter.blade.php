@@ -6,24 +6,24 @@
 </span>
 <hr/>
 <div class="form-label-group">
-    <span>
-        @Todo Implement Image upload
-    </span>
+    <div class="form-label-group">
+        @include('vof.admin.assets::partials.upload', ['name' => 'metaTwitterImage', 'uploadLable' => 'upload-label-meta-twitter'])
+    </div>
 </div>
 <div class="form-label-group">
-    <input type="text" id="metaFacebookTitle" name="metaFacebookTitle" class="form-control"
+    <input type="text" id="metaTwitterTitle" name="metaTwitterTitle" class="form-control"
            placeholder="@lang('vof.admin.category::category.create.partials.placeholder.title')">
-    <label for="metaFacebookTitle"></label>
+    <label for="metaTwitterTitle"></label>
 </div>
 <div class="form-label-group">
-    <input type="url" id="metaFacebookUrl" name="metaFacebookUrl" class="form-control"
+    <input type="url" id="metaTwitterUrl" name="metaTwitterUrl" class="form-control"
            placeholder="@lang('vof.admin.category::category.create.partials.placeholder.meta.url')">
-    <label for="metaFacebookUrl"></label>
+    <label for="metaTwitterUrl"></label>
 </div>
 <div class="form-label-group">
-    <input type="text" id="metaFacebookSitename" name="metaFacebookSitename" class="form-control"
+    <input type="text" id="metaTwitterSitename" name="metaTwitterSitename" class="form-control"
            placeholder="@lang('vof.admin.category::category.create.partials.placeholder.meta.sitename')">
-    <label for="metaFacebookSitename"></label>
+    <label for="metaTwitterSitename"></label>
 </div>
 <div class="form-label-group">
     <label for="metaTwitterType">@lang('vof.admin.category::category.create.partials.placeholder.meta.type')</label>
