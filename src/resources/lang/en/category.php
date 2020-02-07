@@ -46,6 +46,16 @@ return [
                     'type' => 'Meta Type',
                 ]
             ]
+        ],
+        'errors' => [
+            'titleshort' => 'Title is to short 50 chars minimum',
+            'titleempty' => 'Title is empty this is required',
+            'titlelong' => 'Title is too long 60 chars maximum',
+            'descriptionshort' => 'Description is to short 50 chars minimum',
+            'descriptionempty' => 'Description is empty this is required',
+            'descriptionlong' => 'Description is too long 60 chars maximum',
+            'metatitleempty' => 'Meta Title is empty this is required',
+            'metatitlelong' => 'Meta Title is too long 60 chars maximum',
         ]
     ],
     ''
