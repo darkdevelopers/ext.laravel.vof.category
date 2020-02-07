@@ -51,7 +51,10 @@ class CategoryController extends Controller
         /** @var Collection $collectionMetaType */
         $collectionMetaType = CategoryMetaType::all();
 
-        return view('vof.admin.category::create', ['metaTypes' => $collectionMetaType]);
+        /** @var Collection $collectionCategory */
+        $collectionCategory = Category::with('categoryContent')->get();
+
+        return view('vof.admin.category::create', ['metaTypes' => $collectionMetaType, 'categories' => $collectionCategory]);
     }
 
     /**

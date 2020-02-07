@@ -36,6 +36,8 @@ return [
             'placeholder' => [
                 'title' => 'Category Title',
                 'description' => 'Description',
+                'nocategorieselected' => 'categorie not selected',
+                'parentcategorieselect' => 'Select parent categorie',
                 'meta' => [
                     'title' => 'Meta Title',
                     'description' => 'Meta Description',
